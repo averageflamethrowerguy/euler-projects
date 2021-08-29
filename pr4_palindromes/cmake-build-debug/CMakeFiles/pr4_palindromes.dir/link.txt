@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/pr4_palindromes.dir/main.c.o -o pr4_palindromes  -lm 

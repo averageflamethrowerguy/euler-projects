@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/read_nearby_digits.dir/main.c.o -o read_nearby_digits 

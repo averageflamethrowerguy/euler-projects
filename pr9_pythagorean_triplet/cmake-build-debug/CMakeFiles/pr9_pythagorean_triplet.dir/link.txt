@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/pr9_pythagorean_triplet.dir/main.c.o -o pr9_pythagorean_triplet 

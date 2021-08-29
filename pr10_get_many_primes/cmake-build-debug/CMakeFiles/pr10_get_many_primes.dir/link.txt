@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/pr10_get_many_primes.dir/main.c.o -o pr10_get_many_primes  -lm 

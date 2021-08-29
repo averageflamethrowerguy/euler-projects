@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/pr3_largest_prime_factor.dir/main.c.o -o pr3_largest_prime_factor  -lm 
