@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/p11_read_diagonals_on_grid.dir/main.cpp.o -o p11_read_diagonals_on_grid 

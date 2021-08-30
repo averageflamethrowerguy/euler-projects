@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/longest_collatz_sequence.dir/main.cpp.o -o longest_collatz_sequence 

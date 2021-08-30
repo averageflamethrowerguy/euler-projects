@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr_15_lattice_paths.dir/main.cpp.o -o pr_15_lattice_paths 

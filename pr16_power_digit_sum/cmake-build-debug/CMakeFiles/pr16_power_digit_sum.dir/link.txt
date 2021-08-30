@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr16_power_digit_sum.dir/main.cpp.o -o pr16_power_digit_sum 

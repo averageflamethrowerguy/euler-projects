@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr12_triangle_number.dir/main.cpp.o -o pr12_triangle_number  -lm 
