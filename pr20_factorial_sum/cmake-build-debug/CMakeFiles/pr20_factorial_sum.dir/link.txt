@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr20_factorial_sum.dir/main.cpp.o -o pr20_factorial_sum 

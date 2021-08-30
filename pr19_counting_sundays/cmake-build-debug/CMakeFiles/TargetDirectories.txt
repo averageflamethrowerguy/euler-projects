@@ -1,0 +1,3 @@
+/home/smooth_operator/fun/euler/pr19_counting_sundays/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/smooth_operator/fun/euler/pr19_counting_sundays/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/smooth_operator/fun/euler/pr19_counting_sundays/cmake-build-debug/CMakeFiles/pr19_counting_sundays.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr19_counting_sundays.dir/main.cpp.o -o pr19_counting_sundays 
