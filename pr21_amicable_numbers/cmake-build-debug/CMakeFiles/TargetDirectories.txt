@@ -1,0 +1,3 @@
+/home/smooth_operator/fun/euler/pr21_amicable_numbers/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/smooth_operator/fun/euler/pr21_amicable_numbers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/smooth_operator/fun/euler/pr21_amicable_numbers/cmake-build-debug/CMakeFiles/pr21_amicable_numbers.dir
