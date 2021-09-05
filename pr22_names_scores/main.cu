@@ -175,15 +175,15 @@ void sort_names_with_cuda(char* names_arrays, int number_names) {
     // Copy output vector from GPU buffer to host memory.
     cudaMemcpy(names_arrays, dev_sort, memory_size, cudaMemcpyDeviceToHost);
 
-    int currentNameIndex = 0;
-    while (currentNameIndex < number_names) {
-        for (int i = 0; i < max_name_length; i++) {
-            printf("%c", names_arrays[(currentNameIndex * max_name_length) + i]);
-        }
-
-        printf("\n");
-        currentNameIndex++;
-    }
+//    int currentNameIndex = 0;
+//    while (currentNameIndex < number_names) {
+//        for (int i = 0; i < max_name_length; i++) {
+//            printf("%c", names_arrays[(currentNameIndex * max_name_length) + i]);
+//        }
+//
+//        printf("\n");
+//        currentNameIndex++;
+//    }
 
     cudaFree(dev_sort);
     cudaDeviceReset();
@@ -230,6 +230,17 @@ long get_name_scores_total() {
     sort_names_with_cuda(names_arrays, numberNames);
 
     long scores_total = 0;
+
+    for (int i = 0; i < numberNames; i++) {
+        int score = 0;
+        for (int j = 0; j < max_name_length; j++) {
+            if (names_arrays[(i * max_name_length) + j] != 0) {
+                score += names_arrays[(i * max_name_length) + j] - 'A' + 1;
+            }
+        }
+
+        scores_total += score * (i + 1);
+    }
 
     free(names_arrays);
     return scores_total;
