@@ -1,0 +1,1 @@
+/opt/cuda/bin/nvcc -forward-unknown-to-host-compiler -arch=compute_86 -code=sm_86,compute_86 -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/pr22_names_scores.dir/main.cu.o -o CMakeFiles/pr22_names_scores.dir/cmake_device_link.o  -lcudadevrt -lcudart_static -lrt -lpthread -ldl 

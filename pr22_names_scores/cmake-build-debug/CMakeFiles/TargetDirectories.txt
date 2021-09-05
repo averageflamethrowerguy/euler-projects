@@ -1,0 +1,3 @@
+/home/smooth_operator/fun/euler/pr22_names_scores/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/smooth_operator/fun/euler/pr22_names_scores/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/smooth_operator/fun/euler/pr22_names_scores/cmake-build-debug/CMakeFiles/pr22_names_scores.dir

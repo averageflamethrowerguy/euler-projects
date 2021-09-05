@@ -1,0 +1,1 @@
+/opt/cuda/bin/g++ CMakeFiles/pr22_names_scores.dir/main.cu.o CMakeFiles/pr22_names_scores.dir/cmake_device_link.o -o pr22_names_scores  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"

@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/smooth_operator/fun/euler/pr21_amicable_numbers/main.cu
+/home/smooth_operator/fun/euler/pr22_names_scores/main.cu
 iostream
 -
-stdio.h
+vector
+-
+fstream
 -
 
