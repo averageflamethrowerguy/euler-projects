@@ -33,7 +33,7 @@ __global__ void VecDivisorSum(int* number, int size) {
 void get_divisors_with_cuda(int* divisor_sum, int size) {
     int* dev_sum = nullptr;
 
-    // Allocate GPU buffers for three vectors (two input, one output)
+    // Allocate GPU buffer
     cudaMalloc((void**)&dev_sum, size * sizeof(int));
 
     // Copy input vectors from host memory to GPU buffers.

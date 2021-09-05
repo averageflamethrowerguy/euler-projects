@@ -6,7 +6,7 @@
  * GAME_PLAN:
  * 1. Do sorting on GPU
  * 2. Assess scores on GPU
- * 3. Sum scores (try first with long, then other datatype?)
+ * 3. Sum scores
  */
 
 #define MAX_DEPTH       16

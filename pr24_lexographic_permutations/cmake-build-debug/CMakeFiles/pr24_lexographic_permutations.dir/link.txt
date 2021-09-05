@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.o -o pr24_lexographic_permutations 
