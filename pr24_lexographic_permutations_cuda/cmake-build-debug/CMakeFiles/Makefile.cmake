@@ -8,26 +8,18 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "CMakeFiles/3.20.2/CMakeCCompiler.cmake"
-  "CMakeFiles/3.20.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.20.2/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.20.2/CMakeSystem.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCInformation.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCXXInformation.cmake"
+  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCUDAInformation.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeFindCodeBlocks.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeGenericSystem.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/GNU-C.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/GNU.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Platform/Linux-GNU-C.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Platform/Linux-GNU-CXX.cmake"
-  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Platform/Linux-GNU.cmake"
+  "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/NVIDIA-CUDA.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Platform/Linux.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/Platform/UnixPaths.cmake"
   "/home/smooth_operator/programs/CLion/bin/cmake/linux/share/cmake-3.20/Modules/ProcessorCount.cmake"
@@ -46,5 +38,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/pr24_lexographic_permutations.dir/DependInfo.cmake"
+  "CMakeFiles/pr24_lexographic_permutations_cuda.dir/DependInfo.cmake"
   )

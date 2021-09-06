@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pr24_lexographic_permutations.dir/cpu_solution.cpp.o"
   "CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.o"
   "pr24_lexographic_permutations"
   "pr24_lexographic_permutations.pdb"

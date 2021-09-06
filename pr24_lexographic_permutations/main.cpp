@@ -1,15 +1,5 @@
 #include <iostream>
 #include <vector>
-// NOTE -- this problem exhibits none of the parallelism or recursion we've seen in the previous
-// two problems. It is most easily (and sanely) represented as a for-loop. (I think...?)
-// you just have to loop from 0123456789 to 9876543210 and check if a num is a valid permutation
-// return the millionth value
-
-/*
- * Implementation details:
- * 1. Create an algorithm to efficiently generate a list of permutations (that requires limited sorting)
- * 2. Sort using quickSort on the GPU.
- */
 
 #define DIGIT_LENGTH 10
 #define SEARCH_LOC 1000000

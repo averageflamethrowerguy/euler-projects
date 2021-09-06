@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/smooth_operator/fun/euler/pr24_lexographic_permutations/cpu_solution.cpp" "/home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles/pr24_lexographic_permutations.dir/cpu_solution.cpp.o"
   "/home/smooth_operator/fun/euler/pr24_lexographic_permutations/main.cpp" "/home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

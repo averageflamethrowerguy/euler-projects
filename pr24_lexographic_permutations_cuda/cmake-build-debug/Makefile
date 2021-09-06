@@ -57,23 +57,13 @@ RM = /home/smooth_operator/programs/CLion/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations
+CMAKE_SOURCE_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug
+CMAKE_BINARY_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/smooth_operator/programs/CLion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -85,11 +75,21 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/smooth_operator/programs/CLion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug/CMakeFiles /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,65 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pr24_lexographic_permutations
+# Target rules for targets named pr24_lexographic_permutations_cuda
 
 # Build rule for target.
-pr24_lexographic_permutations: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pr24_lexographic_permutations
-.PHONY : pr24_lexographic_permutations
+pr24_lexographic_permutations_cuda: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pr24_lexographic_permutations_cuda
+.PHONY : pr24_lexographic_permutations_cuda
 
 # fast build rule for target.
-pr24_lexographic_permutations/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/build
-.PHONY : pr24_lexographic_permutations/fast
+pr24_lexographic_permutations_cuda/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/build
+.PHONY : pr24_lexographic_permutations_cuda/fast
 
-cpu_solution.o: cpu_solution.cpp.o
-.PHONY : cpu_solution.o
-
-# target to build an object file
-cpu_solution.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/cpu_solution.cpp.o
-.PHONY : cpu_solution.cpp.o
-
-cpu_solution.i: cpu_solution.cpp.i
-.PHONY : cpu_solution.i
-
-# target to preprocess a source file
-cpu_solution.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/cpu_solution.cpp.i
-.PHONY : cpu_solution.cpp.i
-
-cpu_solution.s: cpu_solution.cpp.s
-.PHONY : cpu_solution.s
-
-# target to generate assembly for a file
-cpu_solution.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/cpu_solution.cpp.s
-.PHONY : cpu_solution.cpp.s
-
-main.o: main.cpp.o
+main.o: main.cu.o
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/main.cu.o
+.PHONY : main.cu.o
 
-main.i: main.cpp.i
+main.i: main.cu.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/main.cu.i
+.PHONY : main.cu.i
 
-main.s: main.cpp.s
+main.s: main.cu.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/main.cu.s
+.PHONY : main.cu.s
 
 # Help Target
 help:
@@ -185,10 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pr24_lexographic_permutations"
-	@echo "... cpu_solution.o"
-	@echo "... cpu_solution.i"
-	@echo "... cpu_solution.s"
+	@echo "... pr24_lexographic_permutations_cuda"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

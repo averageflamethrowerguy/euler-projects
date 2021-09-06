@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/smooth_operator/fun/euler/pr24_lexographic_permutations/cpu_solution.cpp">
+			<Option target="pr24_lexographic_permutations"/>
+		</Unit>
 		<Unit filename="/home/smooth_operator/fun/euler/pr24_lexographic_permutations/main.cpp">
 			<Option target="pr24_lexographic_permutations"/>
 		</Unit>

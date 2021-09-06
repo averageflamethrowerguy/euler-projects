@@ -1,0 +1,1 @@
+/opt/cuda/bin/g++ CMakeFiles/pr24_lexographic_permutations_cuda.dir/main.cu.o CMakeFiles/pr24_lexographic_permutations_cuda.dir/cmake_device_link.o -o pr24_lexographic_permutations_cuda  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"

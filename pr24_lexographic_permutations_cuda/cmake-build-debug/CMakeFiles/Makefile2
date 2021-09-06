@@ -54,16 +54,16 @@ RM = /home/smooth_operator/programs/CLion/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations
+CMAKE_SOURCE_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug
+CMAKE_BINARY_DIR = /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/pr24_lexographic_permutations.dir/all
+all: CMakeFiles/pr24_lexographic_permutations_cuda.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/pr24_lexographic_permutations.dir/clean
+clean: CMakeFiles/pr24_lexographic_permutations_cuda.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pr24_lexographic_permutations.dir
+# Target rules for target CMakeFiles/pr24_lexographic_permutations_cuda.dir
 
 # All Build rule for target.
-CMakeFiles/pr24_lexographic_permutations.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target pr24_lexographic_permutations"
-.PHONY : CMakeFiles/pr24_lexographic_permutations.dir/all
+CMakeFiles/pr24_lexographic_permutations_cuda.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target pr24_lexographic_permutations_cuda"
+.PHONY : CMakeFiles/pr24_lexographic_permutations_cuda.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pr24_lexographic_permutations.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pr24_lexographic_permutations.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pr24_lexographic_permutations.dir/rule
+CMakeFiles/pr24_lexographic_permutations_cuda.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pr24_lexographic_permutations_cuda.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/smooth_operator/fun/euler/pr24_lexographic_permutations_cuda/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/pr24_lexographic_permutations_cuda.dir/rule
 
 # Convenience name for target.
-pr24_lexographic_permutations: CMakeFiles/pr24_lexographic_permutations.dir/rule
-.PHONY : pr24_lexographic_permutations
+pr24_lexographic_permutations_cuda: CMakeFiles/pr24_lexographic_permutations_cuda.dir/rule
+.PHONY : pr24_lexographic_permutations_cuda
 
 # clean rule for target.
-CMakeFiles/pr24_lexographic_permutations.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations.dir/build.make CMakeFiles/pr24_lexographic_permutations.dir/clean
-.PHONY : CMakeFiles/pr24_lexographic_permutations.dir/clean
+CMakeFiles/pr24_lexographic_permutations_cuda.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr24_lexographic_permutations_cuda.dir/build.make CMakeFiles/pr24_lexographic_permutations_cuda.dir/clean
+.PHONY : CMakeFiles/pr24_lexographic_permutations_cuda.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
