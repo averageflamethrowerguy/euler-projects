@@ -1,0 +1,1 @@
+/opt/cuda/bin/g++ CMakeFiles/pr26_reciprocal_cycles.dir/main.cu.o CMakeFiles/pr26_reciprocal_cycles.dir/cmake_device_link.o -o pr26_reciprocal_cycles  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
