@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/smooth_operator/fun/euler/pr26_reciprocal_cycles/DevArray.cuh
+stdexcept
+-
+algorithm
+-
+cuda_runtime.h
+-
+
+/home/smooth_operator/fun/euler/pr26_reciprocal_cycles/main.cu
+iostream
+-
+DevArray.cuh
+/home/smooth_operator/fun/euler/pr26_reciprocal_cycles/DevArray.cuh
+

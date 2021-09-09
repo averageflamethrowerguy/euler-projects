@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.20)
 project(pr26_reciprocal_cycles CUDA)
 
