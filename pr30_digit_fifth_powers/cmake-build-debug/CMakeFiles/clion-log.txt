@@ -1,0 +1,4 @@
+/home/smooth_operator/programs/CLion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/smooth_operator/fun/euler/pr30_digit_fifth_powers
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/smooth_operator/fun/euler/pr30_digit_fifth_powers/cmake-build-debug

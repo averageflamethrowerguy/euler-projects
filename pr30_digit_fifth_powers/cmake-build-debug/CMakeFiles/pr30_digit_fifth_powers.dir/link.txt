@@ -1,0 +1,1 @@
+/opt/cuda/bin/g++ CMakeFiles/pr30_digit_fifth_powers.dir/main.cu.o CMakeFiles/pr30_digit_fifth_powers.dir/cmake_device_link.o -o pr30_digit_fifth_powers  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"

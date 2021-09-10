@@ -1,0 +1,3 @@
+/home/smooth_operator/fun/euler/pr29_distinct_powers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/smooth_operator/fun/euler/pr29_distinct_powers/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/smooth_operator/fun/euler/pr29_distinct_powers/cmake-build-debug/CMakeFiles/pr29_distinct_powers.dir

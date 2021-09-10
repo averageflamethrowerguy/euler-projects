@@ -1,0 +1,3 @@
+/home/smooth_operator/fun/euler/pr28_spiral_diagonals/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/smooth_operator/fun/euler/pr28_spiral_diagonals/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/smooth_operator/fun/euler/pr28_spiral_diagonals/cmake-build-debug/CMakeFiles/pr28_spiral_diagonals.dir

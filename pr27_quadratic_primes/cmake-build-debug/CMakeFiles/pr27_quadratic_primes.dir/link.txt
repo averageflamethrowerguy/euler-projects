@@ -1,0 +1,1 @@
+/opt/cuda/bin/g++ CMakeFiles/pr27_quadratic_primes.dir/main.cu.o CMakeFiles/pr27_quadratic_primes.dir/cmake_device_link.o -o pr27_quadratic_primes  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"

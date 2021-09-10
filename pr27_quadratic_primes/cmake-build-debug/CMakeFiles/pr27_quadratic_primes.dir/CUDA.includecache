@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/smooth_operator/fun/euler/pr27_quadratic_primes/DevArray.cuh
+stdexcept
+-
+algorithm
+-
+cuda_runtime.h
+-
+
+/home/smooth_operator/fun/euler/pr27_quadratic_primes/main.cu
+iostream
+-
+DevArray.cuh
+/home/smooth_operator/fun/euler/pr27_quadratic_primes/DevArray.cuh
+
