@@ -96,5 +96,4 @@ void main()
 {
 	int pandigital = findLargestPandigital();
 	printf("Largest Pandigital: %d\n", pandigital);
-	//932718654
 }
