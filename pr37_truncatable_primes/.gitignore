@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr37_truncatable_primes
+pr37_truncatable_primes.so
+pr37_truncatable_primes.dylib
+pr37_truncatable_primes.dll
+pr37_truncatable_primes.a
+pr37_truncatable_primes.lib
+pr37_truncatable_primes-test-*
+*.exe
+*.o
+*.obj
+*.lst

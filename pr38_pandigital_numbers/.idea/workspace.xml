@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="028f4658-aa9a-447e-b320-0bfbf69f4a2a" name="Changes" comment="" />
+    <list default="true" id="5eadab3a-a0c4-4353-9a8a-374a71eff15e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../pr34_factorial_sums/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1y5McIHMvSTSjf6P259fXmWmsNf" />
+  <component name="ProjectId" id="1y5g0slmSUuVaaHtRnCUaK7c6bt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +25,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Run D App" type="DlangRunAppConfigType" factoryName="DlangRunAppConfigType" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="pr34_factorial_sums" />
+      <module name="pr38_pandigital_numbers" />
       <option name="additionalParams" />
       <option name="allowRunningInParallel" value="false" />
       <option name="envVars">
@@ -52,7 +54,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Compile with DMD" type="DlangRunDmdConfigType" factoryName="DlangRunDmdConfigType" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="pr34_factorial_sums" />
+      <module name="pr38_pandigital_numbers" />
       <option name="addSymbolicDebugInfo" value="false" />
       <option name="addSymbolicDebugInfoC" value="false" />
       <option name="allowDeprecated" value="false" />
@@ -149,7 +151,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Run DUB" type="DlangRunDubConfigType" factoryName="DlangRunDubConfigType" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="pr34_factorial_sums" />
+      <module name="pr38_pandigital_numbers" />
       <option name="additionalParams" />
       <option name="allowRunningInParallel" value="false" />
       <option name="buildMode" value="0" />
@@ -215,12 +217,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="028f4658-aa9a-447e-b320-0bfbf69f4a2a" name="Changes" comment="" />
-      <created>1631537074770</created>
+      <changelist id="5eadab3a-a0c4-4353-9a8a-374a71eff15e" name="Changes" comment="" />
+      <created>1631546643602</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631537074770</updated>
-      <workItem from="1631537076218" duration="59000" />
+      <updated>1631546643602</updated>
+      <workItem from="1631546644884" duration="36000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr36_double_base_palindromes
+pr36_double_base_palindromes.so
+pr36_double_base_palindromes.dylib
+pr36_double_base_palindromes.dll
+pr36_double_base_palindromes.a
+pr36_double_base_palindromes.lib
+pr36_double_base_palindromes-test-*
+*.exe
+*.o
+*.obj
+*.lst
