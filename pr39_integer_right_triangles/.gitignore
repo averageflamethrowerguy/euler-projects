@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr39_integer_right_triangles
+pr39_integer_right_triangles.so
+pr39_integer_right_triangles.dylib
+pr39_integer_right_triangles.dll
+pr39_integer_right_triangles.a
+pr39_integer_right_triangles.lib
+pr39_integer_right_triangles-test-*
+*.exe
+*.o
+*.obj
+*.lst
