@@ -28,6 +28,7 @@ bool isFactorialSum(int number) {
 	}
 
 	if (number == sum) {
+		printf("Number: %d\n", number);
 		return true;
 	}
 	else return false;
@@ -49,5 +50,5 @@ void main()
 {
 	long sum = sumOfFactorialSum(2200000);
 	printf("Sum: %ld", sum);
-	//1932312307 (?)
+	// 40730 --> only two numbers count!
 }

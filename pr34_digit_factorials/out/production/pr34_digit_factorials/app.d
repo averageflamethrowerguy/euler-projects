@@ -28,6 +28,7 @@ bool isFactorialSum(int number) {
 	}
 
 	if (number == sum) {
+		printf("Number: %d\n", number);
 		return true;
 	}
 	else return false;
