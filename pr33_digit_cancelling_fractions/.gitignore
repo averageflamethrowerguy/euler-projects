@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr33_digit_cancelling_fractions
+pr33_digit_cancelling_fractions.so
+pr33_digit_cancelling_fractions.dylib
+pr33_digit_cancelling_fractions.dll
+pr33_digit_cancelling_fractions.a
+pr33_digit_cancelling_fractions.lib
+pr33_digit_cancelling_fractions-test-*
+*.exe
+*.o
+*.obj
+*.lst
