@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr35_circular_primes
+pr35_circular_primes.so
+pr35_circular_primes.dylib
+pr35_circular_primes.dll
+pr35_circular_primes.a
+pr35_circular_primes.lib
+pr35_circular_primes-test-*
+*.exe
+*.o
+*.obj
+*.lst

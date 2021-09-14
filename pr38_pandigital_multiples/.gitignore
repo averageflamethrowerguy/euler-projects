@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr38_pandigital_multiples
+pr38_pandigital_multiples.so
+pr38_pandigital_multiples.dylib
+pr38_pandigital_multiples.dll
+pr38_pandigital_multiples.a
+pr38_pandigital_multiples.lib
+pr38_pandigital_multiples-test-*
+*.exe
+*.o
+*.obj
+*.lst

@@ -1,0 +1,8 @@
+{
+	"authors": [
+		"Operator"
+	],
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "pr34_digit_factorials"
+}

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr40_champernowne's_constant
+pr40_champernowne's_constant.so
+pr40_champernowne's_constant.dylib
+pr40_champernowne's_constant.dll
+pr40_champernowne's_constant.a
+pr40_champernowne's_constant.lib
+pr40_champernowne's_constant-test-*
+*.exe
+*.o
+*.obj
+*.lst

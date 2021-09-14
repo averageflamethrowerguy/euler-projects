@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr34_digit_factorials
+pr34_digit_factorials.so
+pr34_digit_factorials.dylib
+pr34_digit_factorials.dll
+pr34_digit_factorials.a
+pr34_digit_factorials.lib
+pr34_digit_factorials-test-*
+*.exe
+*.o
+*.obj
+*.lst
