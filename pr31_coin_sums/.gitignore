@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr31_coin_sums
+pr31_coin_sums.so
+pr31_coin_sums.dylib
+pr31_coin_sums.dll
+pr31_coin_sums.a
+pr31_coin_sums.lib
+pr31_coin_sums-test-*
+*.exe
+*.o
+*.obj
+*.lst

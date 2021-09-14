@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/pr32_pandigital_products
+pr32_pandigital_products.so
+pr32_pandigital_products.dylib
+pr32_pandigital_products.dll
+pr32_pandigital_products.a
+pr32_pandigital_products.lib
+pr32_pandigital_products-test-*
+*.exe
+*.o
+*.obj
+*.lst
