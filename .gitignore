@@ -1,3 +1,8 @@
 */vigcore.*
 pr21_amicable_numbers/cmake-build-debug/vgcore.3052
 pr21_amicable_numbers/cmake-build-debug/vgcore.3288
+
+
+# Added by cargo
+
+/target
