@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include <chrono>
+#include "SumContainer.h"
 #include "SumContainer.h"
 
 /*
@@ -17,99 +17,86 @@
 
 std::vector<long> fibNumbers{};
 std::vector<long> fibSums{};
-std::map<long, SumContainer*> sumContainerGroups;
-long maxSumToStore = 10000000000; // 10^10
+std::map<long, SumContainer> sumContainerGroups;
 
 long getFibCombinationsHelper(long sum, int indexOfHighestPossibleFib) {
+    // first, we check if we already have this value stored in sumContainerGroups
+    std::map<long, SumContainer>::iterator it;
+    it = sumContainerGroups.find(sum);
+
     int indexOfLargestFib = indexOfHighestPossibleFib; // this caps our upward value
-    int indexOfSmallestFib = indexOfLargestFib;
 
     SumContainer* container;
-    bool containerFilled = false;
     // we have an existing container
+    if (it != sumContainerGroups.end()) {
+        container = &it->second;
 
-    if (sum < maxSumToStore) {
-        // first, we check if we already have this value stored in sumContainerGroups
-        std::map<long, SumContainer*>::iterator it;
-        it = sumContainerGroups.find(sum);
-
-        if (it != sumContainerGroups.end()) {
-            container = it->second;
-            containerFilled = true;
-
-            // update indexOfLargestFib based on stored value
-            if (container->indexOfLargestFib < indexOfLargestFib) {
-                indexOfLargestFib = container->indexOfLargestFib;
-            }
+        // update indexOfLargestFib based on stored value
+        if (container->indexOfLargestFib < indexOfLargestFib) {
+            indexOfLargestFib = container->indexOfLargestFib;
         }
     }
-
-    // we find the index of the highest Fib less than sum
-    while (indexOfLargestFib >= 0 && fibNumbers[indexOfLargestFib] > sum) {
-        indexOfLargestFib--;
-    }
-    if (indexOfLargestFib < 0) {
-        indexOfLargestFib = 0;
-    }
-
-    if (containerFilled) {
-        auto combo_iterator = container->combinationsMap.find(indexOfLargestFib);
-        // we already have the value for the number of combinations from a previous iteration;
-        // we use that instead of calculating again
-        if (combo_iterator != container->combinationsMap.end()) {
-            // return so we can recover up the chain
-            return combo_iterator->second;
-        }
-    }
-
-    // we find the index of the lowest Fib that still has a fibSum greater than sum
-    // we iterate downward because that should be faster in general
-    while(indexOfSmallestFib >= 0 && fibSums[indexOfSmallestFib] >= sum) {
-        indexOfSmallestFib--;
-    }
-    // we overshoot by one and correct it
-    indexOfSmallestFib++;
-
-    if (sum < maxSumToStore) {
-        container = new SumContainer(sum, indexOfLargestFib, indexOfSmallestFib);
-        sumContainerGroups.insert({sum, container});
-        containerFilled = true;
-    }
-
-    long numberPossibleCombinations = 0;
-    // we've overrun the possible sums; must return 0 (or 1 if it's a Fib)
-    if (indexOfLargestFib < container->indexOfSmallestFib) {}
-    // otherwise, we continue recursing
-
     else {
-        for (int i = container->indexOfSmallestFib;
-             i <= indexOfLargestFib;
-             i++
-        ) {
-            long newFib = fibNumbers[i];
-            if (sum - newFib > 0) {
-                numberPossibleCombinations += getFibCombinationsHelper(
-                        sum - newFib,
-                        // this is the trick! We prevent selection of larger fibs
-                        i - 1
-                );
-            }
-
+        // we find the index of the highest Fib less than sum
+        while (indexOfLargestFib >= 0 && fibNumbers[indexOfLargestFib] > sum) {
+            indexOfLargestFib--;
         }
+        if (indexOfLargestFib < 0) {
+            indexOfLargestFib = 0;
+        }
+
+        // we find the index of the lowest Fib that still has a fibSum greater than sum
+        // we iterate downward because that should be faster in general
+        int indexOfSmallestFib = indexOfLargestFib;
+        while(indexOfSmallestFib >= 0 && fibSums[indexOfSmallestFib] >= sum) {
+            indexOfSmallestFib--;
+        }
+        // we overshoot by one and correct it
+        indexOfSmallestFib++;
+
+        container = new SumContainer(sum, indexOfLargestFib, indexOfSmallestFib);
     }
 
-    // test to see if this number is itself a fib; if so, add 1 to the sum (because the sum is
-    // itself a valid combination
-    if (fibNumbers[indexOfLargestFib] == sum) {
-        numberPossibleCombinations++;
+    auto combo_iterator = container->combinationsMap.find(indexOfLargestFib);
+    // we already have the value for the number of combinations from a previous iteration;
+    // we use that instead of calculating again
+    if (combo_iterator != container->combinationsMap.end()) {
+        // return so we can recover up the chain
+        return combo_iterator->second;
     }
+    else {
+        long numberPossibleCombinations = 0;
+        // we've overrun the possible sums; must return 0 (or 1 if it's a Fib)
+        if (indexOfLargestFib < container->indexOfSmallestFib) {}
+        // otherwise, we continue recursing
 
-    // only do this for smaller sums
-    if (containerFilled) {
+        else {
+            for (int i = container->indexOfSmallestFib;
+                 i <= indexOfLargestFib;
+                 i++
+            ) {
+                long newFib = fibNumbers[i];
+                if (sum - newFib > 0) {
+                    numberPossibleCombinations += getFibCombinationsHelper(
+                            sum - newFib,
+                            // this is the trick! We prevent selection of larger fibs
+                            i - 1
+                    );
+                }
+
+            }
+        }
+
+        // test to see if this number is itself a fib; if so, add 1 to the sum (because the sum is
+        // itself a valid combination
+        if (fibNumbers[indexOfLargestFib] == sum) {
+            numberPossibleCombinations++;
+        }
+
         container->combinationsMap.insert({indexOfLargestFib, numberPossibleCombinations});
-    }
 
-    return numberPossibleCombinations;
+        return numberPossibleCombinations;
+    }
 }
 
 long getFibCombinationsSum(long maxNumber) {
@@ -127,18 +114,15 @@ long getFibCombinationsSum(long maxNumber) {
     }
 
     long combinationsSum = 0;
-
-    auto start = std::chrono::high_resolution_clock::now();
-    for (long i = maxNumber; i >= 0; i--) {
+    int currentPowerTen = 10;
+    int sizeOfPower = 1;
+    for (int i = 0; i <= maxNumber; i++) {
         if (i == 0) combinationsSum++;
 
-        if (i % 1000000 == 0) {
-            auto current = std::chrono::high_resolution_clock::now();
-            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
-                    current - start
-                    );
-            std::cout << i << ", " << duration.count() << std::endl;
-            start = current;
+        if (i % currentPowerTen == 0) {
+            std::cout << sizeOfPower << std::endl;
+            currentPowerTen *= 10;
+            sizeOfPower++;
         }
 
         combinationsSum += getFibCombinationsHelper(i,
@@ -148,7 +132,7 @@ long getFibCombinationsSum(long maxNumber) {
     }
 
     for (auto entry : sumContainerGroups) {
-        entry.second->clear();
+        entry.second.clear();
     }
     sumContainerGroups.clear();
 
@@ -158,7 +142,6 @@ long getFibCombinationsSum(long maxNumber) {
 }
 
 int main() {
-    std::cout << getFibCombinationsSum(100) << std::endl;
-//    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
     return 0;
 }
