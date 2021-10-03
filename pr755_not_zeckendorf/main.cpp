@@ -123,7 +123,7 @@ long getFibCombinationsSum(long maxNumber) {
         if (i == 0) combinationsSum++;
 
         if (i % currentPowerTen == 0) {
-            std::cout << sizeOfPower << std::endl;
+            //std::cout << sizeOfPower << std::endl;
             currentPowerTen *= 10;
             sizeOfPower++;
         }
@@ -133,7 +133,7 @@ long getFibCombinationsSum(long maxNumber) {
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
                     current - start
             );
-            std::cout << duration.count() << std::endl;
+            //std::cout << duration.count() << std::endl;
             start = current;
         }
 
@@ -153,9 +153,40 @@ long getFibCombinationsSum(long maxNumber) {
     return combinationsSum;
 }
 
+long getFibCombinationsSumWithMath(long maxNumber) {
+    fibNumbers.push_back(1);
+    fibNumbers.push_back(2);
+
+    while (fibNumbers[fibNumbers.size() - 1] <= maxNumber) {
+        // we add the next fib number
+        fibNumbers.push_back(fibNumbers[fibNumbers.size() - 1] + fibNumbers[fibNumbers.size() - 2]);
+    }
+
+    long cumulativeSum = 6;
+    int fibIndexToStart = 3;  // start with 5
+    long sumToCarry = 3;   // 3...4 has sum 3
+    int oneModifier = -1;
+
+    // we rapidly calculate up to the top of the pattern
+    while (fibNumbers[fibIndexToStart + 1] - 1 <= maxNumber) {
+        sumToCarry = 2 * sumToCarry + oneModifier * 1;
+        oneModifier *= -1;
+        cumulativeSum += sumToCarry;
+        fibIndexToStart++;
+    }
+    // now we need to deal with the remainder of numbers in the pattern
+
+    fibNumbers.clear();
+    fibSums.clear();
+
+    return cumulativeSum;
+}
+
 int main() {
-    //std::cout << getFibCombinationsSum(100) << std::endl;
-    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+   // std::cout << getFibCombinationsSumWithMath(5) << std::endl;
+    std::cout << getFibCombinationsSum(88) << std::endl;
+    std::cout << getFibCombinationsSum(87) << std::endl;
+    //std::cout << getFibCombinationsSum(10000000000000) << std::endl;
     // this implementation starts by taking ~20 secs per 10 million points; it gets worse over time, slowly.
     return 0;
 }
