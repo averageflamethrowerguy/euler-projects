@@ -3,5 +3,4 @@
 
 CMakeFiles/pr755_not_zeckendorf.dir/main.cpp.o: \
  ../SumContainer.h \
- ../SumContainerGroup.h \
  ../main.cpp

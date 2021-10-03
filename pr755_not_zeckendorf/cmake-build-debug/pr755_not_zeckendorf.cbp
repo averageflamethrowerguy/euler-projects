@@ -85,9 +85,6 @@
 		<Unit filename="/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainer.h">
 			<Option target="pr755_not_zeckendorf"/>
 		</Unit>
-		<Unit filename="/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainerGroup.h">
-			<Option target="pr755_not_zeckendorf"/>
-		</Unit>
 		<Unit filename="/home/smooth_operator/fun/euler/pr755_not_zeckendorf/main.cpp">
 			<Option target="pr755_not_zeckendorf"/>
 		</Unit>
