@@ -2,7 +2,6 @@
 #include <vector>
 #include <map>
 #include "SumContainer.h"
-#include "SumContainer.h"
 
 /*
  * This is supposed to be a combinatorics problem, but I'm attempting it with no actual background.
@@ -17,19 +16,18 @@
 
 std::vector<long> fibNumbers{};
 std::vector<long> fibSums{};
-std::map<long, SumContainer> sumContainerGroups;
+std::map<long, SumContainer*> sumContainerGroups;
 
 long getFibCombinationsHelper(long sum, int indexOfHighestPossibleFib) {
     // first, we check if we already have this value stored in sumContainerGroups
-    std::map<long, SumContainer>::iterator it;
-    it = sumContainerGroups.find(sum);
+    auto it = sumContainerGroups.find(sum);
 
     int indexOfLargestFib = indexOfHighestPossibleFib; // this caps our upward value
 
     SumContainer* container;
     // we have an existing container
     if (it != sumContainerGroups.end()) {
-        container = &it->second;
+        container = it->second;
 
         // update indexOfLargestFib based on stored value
         if (container->indexOfLargestFib < indexOfLargestFib) {
@@ -55,6 +53,7 @@ long getFibCombinationsHelper(long sum, int indexOfHighestPossibleFib) {
         indexOfSmallestFib++;
 
         container = new SumContainer(sum, indexOfLargestFib, indexOfSmallestFib);
+        sumContainerGroups.insert({sum, container});
     }
 
     auto combo_iterator = container->combinationsMap.find(indexOfLargestFib);
@@ -132,7 +131,7 @@ long getFibCombinationsSum(long maxNumber) {
     }
 
     for (auto entry : sumContainerGroups) {
-        entry.second.clear();
+        entry.second->clear();
     }
     sumContainerGroups.clear();
 
@@ -142,6 +141,7 @@ long getFibCombinationsSum(long maxNumber) {
 }
 
 int main() {
-    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+    std::cout << getFibCombinationsSum(100) << std::endl;
+    // std::cout << getFibCombinationsSum(10000000000000) << std::endl;
     return 0;
 }
