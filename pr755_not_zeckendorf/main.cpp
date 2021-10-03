@@ -60,10 +60,13 @@ long getFibCombinationsHelper(long sum, const std::vector<long>& consumedFibs, i
     for (SumContainer container : containerGroup->containers) {
         bool isMismatched = false;
         for (long consumedFib : consumedFibs) {
-            // checks to see if the given usedFibNumber is NOT in the Set
-            if (container.usedFibNumbers.find(consumedFib) == container.usedFibNumbers.end()) {
-                isMismatched = true;
-                break;
+            // we only check in-scope Fibs; the ones larger than Sum are irrelevant.
+            if (consumedFib < sum) {
+                // checks to see if the given usedFibNumber is NOT in the Set
+                if (container.usedFibNumbers.find(consumedFib) == container.usedFibNumbers.end()) {
+                    isMismatched = true;
+                    break;
+                }
             }
         }
 
@@ -99,6 +102,20 @@ long getFibCombinationsHelper(long sum, const std::vector<long>& consumedFibs, i
                     newConsumedFibs,
                     i - 1      // this is the trick!
             );
+
+            // construct a Set of only the relevant fibs
+            std::set<long> usedFibNumbers{};
+            for (long consumedFib : consumedFibs) {
+                // we only check in-scope Fibs; the ones larger than Sum are irrelevant.
+                if (consumedFib < sum) {
+                    usedFibNumbers.insert(consumedFib);
+                }
+            }
+            SumContainer newContainer(sum,
+                                      usedFibNumbers,
+                                      numberPossibleCombinations
+                                      );
+            containerGroup->containers.push_back(newContainer);
         }
 
         // in this case, we are at the base of the chain and return 1
