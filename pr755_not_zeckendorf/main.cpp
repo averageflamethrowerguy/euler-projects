@@ -128,7 +128,7 @@ long getFibCombinationsSum(long maxNumber) {
             sizeOfPower++;
         }
 
-        if (i % 10000000 == 0) {
+        if (i % 1000000 == 0) {
             auto current = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
                     current - start

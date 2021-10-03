@@ -85,3 +85,6 @@ Chain 2:
                         set map, return 2
                  set map, return 2
         set map, return 2
+
+
+we probably just need to check 2-3 different locations in memory
