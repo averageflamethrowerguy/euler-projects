@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <chrono>
 #include "SumContainer.h"
 
 /*
@@ -115,6 +116,9 @@ long getFibCombinationsSum(long maxNumber) {
     long combinationsSum = 0;
     int currentPowerTen = 10;
     int sizeOfPower = 1;
+
+    auto start = std::chrono::high_resolution_clock::now();
+
     for (int i = 0; i <= maxNumber; i++) {
         if (i == 0) combinationsSum++;
 
@@ -122,6 +126,15 @@ long getFibCombinationsSum(long maxNumber) {
             std::cout << sizeOfPower << std::endl;
             currentPowerTen *= 10;
             sizeOfPower++;
+        }
+
+        if (i % 10000000 == 0) {
+            auto current = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
+                    current - start
+            );
+            std::cout << duration.count() << std::endl;
+            start = current;
         }
 
         combinationsSum += getFibCombinationsHelper(i,
@@ -141,7 +154,8 @@ long getFibCombinationsSum(long maxNumber) {
 }
 
 int main() {
-    std::cout << getFibCombinationsSum(100) << std::endl;
-    // std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+    //std::cout << getFibCombinationsSum(100) << std::endl;
+    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+    // this implementation starts by taking ~20 secs per 10 million points; it gets worse over time, slowly.
     return 0;
 }
