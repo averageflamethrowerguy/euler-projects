@@ -69,17 +69,20 @@ long getFibCombinationsHelper(long sum, int indexOfHighestPossibleFib) {
         // we've overrun the possible sums; must return 0 (or 1 if it's a Fib)
         if (indexOfLargestFib < container->indexOfSmallestFib) {}
         // otherwise, we continue recursing
+
         else {
             for (int i = container->indexOfSmallestFib;
                  i <= indexOfLargestFib;
                  i++
             ) {
                 long newFib = fibNumbers[i];
-                numberPossibleCombinations += getFibCombinationsHelper(
-                        sum - newFib,
-                        // this is the trick! We prevent selection of larger fibs
-                        i - 1
-                );
+                if (sum - newFib > 0) {
+                    numberPossibleCombinations += getFibCombinationsHelper(
+                            sum - newFib,
+                            // this is the trick! We prevent selection of larger fibs
+                            i - 1
+                    );
+                }
 
             }
         }
@@ -111,17 +114,21 @@ long getFibCombinationsSum(long maxNumber) {
     }
 
     long combinationsSum = 0;
+    int currentPowerTen = 10;
+    int sizeOfPower = 1;
     for (int i = 0; i <= maxNumber; i++) {
+        if (i == 0) combinationsSum++;
 
-     getFibCombinationsHelper(maxNumber,
+        if (i % currentPowerTen == 0) {
+            std::cout << sizeOfPower << std::endl;
+            currentPowerTen *= 10;
+            sizeOfPower++;
+        }
+
+        combinationsSum += getFibCombinationsHelper(i,
                              (int)fibNumbers.size() - 1
                              );
 
-        std::map<long, SumContainer>::iterator it;
-        it = sumContainerGroups.find(maxNumber);
-        if (it != sumContainerGroups.end()) {
-            combinationsSum += it->second.combinationsMap[0];
-        }
     }
 
     for (auto entry : sumContainerGroups) {
@@ -135,6 +142,6 @@ long getFibCombinationsSum(long maxNumber) {
 }
 
 int main() {
-    std::cout << getFibCombinationsSum(100) << std::endl;
+    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
     return 0;
 }
