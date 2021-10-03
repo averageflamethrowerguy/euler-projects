@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainer.h
+set
+-
+
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainerGroup.h
+SumContainer.h
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainer.h
+
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/main.cpp
+iostream
+-
+vector
+-
+map
+-
+SumContainerGroup.h
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainerGroup.h
+SumContainer.h
+/home/smooth_operator/fun/euler/pr755_not_zeckendorf/SumContainer.h
+
