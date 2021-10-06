@@ -5,6 +5,7 @@
 #ifndef PR755_NOT_ZECKENDORF_SUMCONTAINER_H
 #define PR755_NOT_ZECKENDORF_SUMCONTAINER_H
 
+#include <map>
 #include "SumContainer.h"
 
 class SumContainer {
@@ -24,6 +25,10 @@ public:
         this->sum = sum;
         this->indexOfLargestFib = indexOfLargestFib;
         this->indexOfSmallestFib = indexOfSmallestFib;
+    }
+
+    std::map<int, long> getCombinationsMap() {
+        return this->combinationsMap;
     }
 
     void clear() {

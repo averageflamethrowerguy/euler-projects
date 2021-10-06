@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <chrono>
 #include "SumContainer.h"
 
@@ -17,7 +17,7 @@
 
 std::vector<long> fibNumbers{};
 std::vector<long> fibSums{};
-std::map<long, SumContainer*> sumContainerGroups;
+std::unordered_map<long, SumContainer*> sumContainerGroups(100000000);
 
 long getFibCombinationsHelper(long sum, int indexOfHighestPossibleFib) {
     // first, we check if we already have this value stored in sumContainerGroups
@@ -123,17 +123,18 @@ long getFibCombinationsSum(long maxNumber) {
         if (i == 0) combinationsSum++;
 
         if (i % currentPowerTen == 0) {
-            //std::cout << sizeOfPower << std::endl;
+            std::cout << sizeOfPower << std::endl;
             currentPowerTen *= 10;
             sizeOfPower++;
         }
 
-        if (i % 1000000 == 0) {
+        // 10^7
+        if (i % 10000000 == 0) {
             auto current = std::chrono::high_resolution_clock::now();
             auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
                     current - start
             );
-            //std::cout << duration.count() << std::endl;
+            std::cout << duration.count() << std::endl;
             start = current;
         }
 
@@ -184,9 +185,9 @@ long getFibCombinationsSumWithMath(long maxNumber) {
 
 int main() {
    // std::cout << getFibCombinationsSumWithMath(5) << std::endl;
-    std::cout << getFibCombinationsSum(88) << std::endl;
-    std::cout << getFibCombinationsSum(87) << std::endl;
-    //std::cout << getFibCombinationsSum(10000000000000) << std::endl;
+    //std::cout << getFibCombinationsSum(88) << std::endl;
+    //std::cout << getFibCombinationsSum(87) << std::endl;
+    std::cout << getFibCombinationsSum(10000000000000) << std::endl;
     // this implementation starts by taking ~20 secs per 10 million points; it gets worse over time, slowly.
     return 0;
 }
