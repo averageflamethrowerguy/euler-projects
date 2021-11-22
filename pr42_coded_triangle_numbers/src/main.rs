@@ -26,7 +26,8 @@ fn is_triangle_number(number: i32, triangle_nums: &mut Vec<i32>) -> bool {
         largest_triangle = *triangle_nums.get(num_triangle_nums as usize).unwrap();
     }
 
-    while number > largest_triangle {
+    // this is important -- we always need to overshoot by at least one.
+    while number >= largest_triangle {
         largest_triangle = ((triangle_nums.len() + 1) * (triangle_nums.len() + 2) / 2) as i32;
         triangle_nums.push(largest_triangle);
     }
