@@ -15,60 +15,63 @@ compute difference using set of P numbers
 
  */
 
-use std::cmp::min;
 use std::collections::HashSet;
 
+// check if a number is pentagonal
+fn is_pentagonal(number : i32) -> bool {
+    let pen_test = ((number as f64 + 1.0 ).sqrt() + 1.0) / 6.0;
+    // do type coercion to check if modulo is equal.
+    if pen_test == (pen_test as i64) as f64 {
+        return true;
+    }
+    return false;
+}
+
+// gets a pent number from a certain number
+fn get_pentagonal(pent_index : i32) -> i32 {
+    return (3*pent_index - 1)*pent_index / 2
+}
+
 fn find_min_abs_diff_pent_nums() -> i32 {
-    let mut pent_num_set : HashSet<i32> = HashSet::new();
-    let mut pent_num_vec : Vec<i32> = Vec::new();
     let mut min_diff : i32 = i32::MAX;
     let mut last_diff = 0;
     let mut next_index = 0;
     let mut search_downward_index:i32 = 0;
 
-    // add 1 (the first pent num) into the vec and set
-    pent_num_set.insert(1);
-    pent_num_vec.push(1);
-
     // the last difference bounds the system
     while last_diff < min_diff {
         let current_num = next_index+1;
-        let current_pent = (3*current_num*current_num - current_num) / 2;
+        let current_pent = get_pentagonal(current_num);
         let next_num = current_num+1;
-        let next_pent = (3*next_num*next_num - next_num) / 2;
-        pent_num_vec.push(next_pent);
-        pent_num_set.insert(next_pent);
+        let next_pent = get_pentagonal(next_num);
 
-        let pent_diff = current_pent-next_pent;
+        last_diff = next_pent-current_pent;
 
         // while the value search_downward_index is smaller than the difference to the
         // next pent number, increase the index
-        while pent_num_vec.get(search_downward_index).unwrap() < &pent_diff {
+        while get_pentagonal(search_downward_index+1) < last_diff {
             search_downward_index += 1;
         }
 
+
+        // searches a subset of the pent numbers underneath this one in order to
+        // find the next pent number
         let mut temp_search_downward_index = search_downward_index;
         while temp_search_downward_index < next_index {
+            let other_pent = get_pentagonal(temp_search_downward_index+1);
             // if the diff is a pent number
-            if pent_num_set.contains(current_pent - pent_num_vec.get(temp_search_downward_index)) {
+            if is_pentagonal(current_pent-other_pent) {
                 // evaluate if the sum is a pent number
-                let sum = current_pent + pent_num_vec.get(temp_search_downward_index);
-                let mut temp_search_upward_index = next_index;
-                let mut last_pent = current_pent;
+                let sum = current_pent + other_pent;
+                println!("Current num: {}, Current pent: {}", current_num, current_pent);
+                println!("Last diff: {}, min diff: {}", last_diff, min_diff);
 
-                while last_pent <= sum {
-                    // if we hit the sum, store the difference
-                    if last_pent == sum && pent_diff < min_diff {
-                        min_diff = pent_diff;
+                if is_pentagonal(sum) {
+                    if (sum - current_pent) < min_diff {
+                        min_diff = sum - current_pent;
+                        println!("Last diff: {}, min diff: {}", last_diff, min_diff);
+                        println!("pent1: {}, pent2: {}", temp_search_downward_index+1, next_num);
                     }
-                    let upward_num = temp_search_upward_index + 1;
-                    let upward_pent = (3*upward_num - 1) * upward_num;
-                    if !pent_num_set.contains(&upward_pent) {
-                        pent_num_set.insert(upward_pent);
-                        pent_num_vec.push(upward_pent);
-                    }
-
-                    temp_search_upward_index += 1;
                 }
             }
 
