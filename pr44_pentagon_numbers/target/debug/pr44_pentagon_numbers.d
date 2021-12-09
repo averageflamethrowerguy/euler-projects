@@ -1,1 +1,1 @@
-/home/smooth_operator/fun/euler/pr44_pentagon_numbers/target/debug/pr44_pentagon_numbers: /home/smooth_operator/fun/euler/pr44_pentagon_numbers/src/main.rs
+C:\Users\Operator\fun\euler-projects\pr44_pentagon_numbers\target\debug\pr44_pentagon_numbers.exe: C:\Users\Operator\fun\euler-projects\pr44_pentagon_numbers\src\main.rs
