@@ -57,5 +57,6 @@ fn find_first_comp_num_that_fails() -> i32 {
 }
 
 fn main() {
+    // 5777
     println!("{}", find_first_comp_num_that_fails());
 }
