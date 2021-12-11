@@ -1,0 +1,1 @@
+C:\Users\Operator\fun\euler-projects\pr51_prime_digit_replacements\build\classes\kotlin\main\Prime_digit_replacementsKt.class
