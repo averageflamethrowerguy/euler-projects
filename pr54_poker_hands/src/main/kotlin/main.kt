@@ -68,7 +68,7 @@ class Hand(cards: MutableList<String>) {
                     // triples, and takes care of any existing pairs
                     else if (highestPair == conversion) {
                         threeOfKind = conversion
-                        highestCard = secondPair
+                        highestPair = secondPair
                         secondPair = 0
                     }
                     // takes care of second and highest pairs
@@ -204,6 +204,6 @@ fun countPlayer1Victories() : Int {
 }
 
 fun main() {
-    // runs 377; should be 376 (what am I missing...?)
+    // 376
     println(countPlayer1Victories())
 }
