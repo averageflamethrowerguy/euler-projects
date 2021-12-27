@@ -1,0 +1,1 @@
+C:\Users\Operator\fun\euler-projects\pr56_powerful_digit_sum\build\classes\kotlin\main\DigitSumAndCount.class;C:\Users\Operator\fun\euler-projects\pr56_powerful_digit_sum\build\classes\kotlin\main\MainKt.class
